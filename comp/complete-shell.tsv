@@ -1,0 +1,24 @@
+name	desc	tags	from
+cpan	"Easily interact with CPAN from the command line"	perl,perl5,cpan	cpan.comp
+cpanm	"Install CPAN modules"	perl,perl5,cpan	cpanm.comp
+cpan-upload	"Upload a distribution to the CPAN"	perl,perl5,cpan	cpan-upload.comp
+dancer2	"Dancer2 command line interface"	perl,perl5	dancer2.comp
+dzil	"Do stuff with your dist"	perl,perl5	dzil.comp
+fatpack	"Pack perl script and modules into standalone script"	perl,perl5	fatpack.comp
+file	"Determine file type"	posix	file.comp
+hypnotoad	"Hypnotoad HTTP and WebSocket server"	perl,perl5	hypnotoad.comp
+jq	"Command-line JSON processor"	json	jq.comp
+json_pp	"JSON::PP command utility"	perl,perl5,json	json_pp.comp
+json_xs	"JSON::XS commandline utility"	perl,perl5,json	json_xs.comp
+lwp-request	"Simple command line user agent (Aliases GET, HEAD, POST)"	perl,perl5,http	lwp-request.comp
+mojo	"The Mojolicious command system"	perl,perl5	mojo.comp
+morbo	"Morbo HTTP and WebSocket development server"	perl,perl5	morbo.comp
+mpath	"Display the full path to a perl module (installed locally)"	perl,perl5	mpath.comp
+pip	"A tool for installing and managing Python packages"	python	pip.comp
+plackup	"Run PSGI application with Plack handlers"	perl,perl5	plackup.comp
+pod2html	"Convert .pod files to .html files"	perl,perl5	pod2html.comp
+prove	"Run tests through a TAP harness"	perl,perl5	prove.comp
+starman	"High-performance preforking PSGI/Plack web server"	perl,perl5	starman.comp
+tower-cli	"Ansible Tower Commandline"	ansible	tower-cli.comp
+ysh	"The YAML Test Shell"	perl,perl5,yaml	ysh.comp
+zild	"Dist::Zilla Mixed Up"	perl,perl5	zild.comp

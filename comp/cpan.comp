@@ -1,0 +1,39 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/cpan.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N cpan v0.0.0         ..'Easily interact with CPAN from the command line'
+
+M tags perl perl5 cpan
+
+O -a                  ..'Creates a CPAN.pm autobundle with CPAN::Shell->autobundle'
+O -A                  ..'Shows the primary maintainers for the specified modules'
+O -c                  .."Runs a 'make clean' in the specified module's directories"
+O -C                  ..'Show the Changes files for the specified modules'
+O -D                  ..'Show the module details'
+O -f                  ..'Force the specified action, when it normally would have failed'
+O -F                  .."Turn off CPAN.pm's attempts to lock anything"
+O -g                  ..'Downloads to the current directory the latest distribution...'
+O -i                  ..'Install the specified modules'
+O -I                  ..'Load "local::lib" (think like "-I" for loading lib paths)'
+O -j =file            ..'Load the file that has the CPAN configuration data'
+O -J                  ..'Dump the configuration in the same format that CPAN.pm uses'
+O -l                  ..'List all installed modules with their versions'
+O -L                  ..'List the modules by the specified authors'
+O -m                  ..'Make the specified modules'
+O -O                  ..'Show the out-of-date modules'
+O -p                  ..'Ping the configured mirrors'
+O -P                  ..'Find the best mirrors you could be using'
+O -r                  ..'Recompiles dynamically loaded modules with CPAN::Shell->recompile'
+O -t                  .."Run a 'make test' on the specified modules"
+O -T                  ..'Do not test modules. Simply install them'
+O -u                  ..'Upgrade all installed modules'
+O -v                  ..'Print the script version and CPAN.pm version'
+O -V                  ..'Print detailed information about the cpan client'
+O -h --help           ..'Show command help'
+
+A modules...
+
+# vim: set ft=sh:

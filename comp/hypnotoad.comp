@@ -1,0 +1,18 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/hypnotoad.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N hypnotoad v0.0.0    ..'Hypnotoad HTTP and WebSocket server'
+
+M tags perl perl5
+
+O -f --foreground     ..'Keep manager process in foreground'
+O -s --stop           ..'Stop server gracefully'
+O -t --test           ..'Test application and exit'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

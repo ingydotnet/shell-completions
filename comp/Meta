@@ -1,0 +1,68 @@
+cpan:
+  tags: perl perl5 cpan
+
+cpanm:
+  tags: perl perl5 cpan
+
+cpan-upload:
+  tags: perl perl5 cpan
+
+dancer2:
+  tags: perl perl5
+
+dzil:
+  tags: perl perl5
+
+fatpack:
+  tags: perl perl5
+
+file:
+  tags: posix
+
+hypnotoad:
+  tags: perl perl5
+
+jq:
+  tags: json
+
+json_pp:
+  tags: perl perl5 json
+
+json_xs:
+  tags: perl perl5 json
+
+lwp-request:
+  tags: perl perl5 http
+
+mojo:
+  tags: perl perl5
+
+morbo:
+  tags: perl perl5
+
+mpath:
+  tags: perl perl5
+
+pip:
+  tags: python
+
+plackup:
+  tags: perl perl5
+
+pod2html:
+  tags: perl perl5
+
+prove:
+  tags: perl perl5
+
+starman:
+  tags: perl perl5
+
+tower-cli:
+  tags: ansible
+
+ysh:
+  tags: perl perl5 yaml
+
+zild:
+  tags: perl perl5

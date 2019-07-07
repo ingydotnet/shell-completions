@@ -1,0 +1,42 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/file.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N file v0.0.0         ..'Determine file type'
+
+M tags posix
+
+O --apple             ..'Output file type and creator code as used by older MacOS versions'
+O -b --brief          ..'Do not prepend filenames to output'
+O -C --compile        ..'Write a magic.mgc output file'
+O -c --checking-printout  ..'Cause a checking printout of the parsed form of the magic file'
+O -d                  ..'Prints internal debugging information'
+O -E                  ..'On filesystem errors, issue an error message and exit'
+O --extension         ..'Print a slash-separated list of valid extensions'
+O -F --seperator =str  ..'Use the specified string as the separator'
+O -f --files-from =file  ..'Read the names of the files to be examined from file'
+O -h --no-dereference  ..'Option causes symlinks not to be followed'
+O -i --mime           ..'Causes the file command to output mime type strings'
+O -k --keep-going     .."Don't stop at the first match"
+O -l --list           ..'Shows a list of patterns and their strength'
+O -L --dereference    ..'Option causes symlinks to be followed'
+O -m --magic-file =file  ..'Specify an alternate list of files and directories containing magic'
+O -N --no-pad         ..'Dont pad filenames'
+O -n --no-buffer      ..'Force stdout to be flushed after checking each file'
+O -p --preserve-date  ..'Attempt to preserve the access time of files'
+O -r --raw            ..'Dont translate unprintable characters to \ooo'
+O -s --special-files  ..'Causes file to also read argument files which are block or character special files'
+O -v --version        ..'Print the version of the program and exit'
+O -z --uncompress     ..'Try to look inside compressed files'
+O -Z --uncompress-noreport  ..'Like uncompress, but report information about the contents only not the compression'
+O 0 --print0          ..'Output a null character \0 after the end of the filename'
+O -e --exclude =[apptype,ascii,encoding,tokens,cdf,compress,elf,soft,tar,text]...  ..'Exclude named tests from the list of tests made to determine the file type'
+O --mime-type         ..'Like --mime, but print only the specified element(s)'
+O -P --parameter =[indir=,name=,elf_notes=,elf_phnum=,elf_shnum=,regex=,bytes=]  ..'Set various parameter limits'
+O -h --help           ..'Show command help'
+
+A file...
+
+# vim: set ft=sh:

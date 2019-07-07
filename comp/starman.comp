@@ -1,0 +1,48 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/starman.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N starman v0.0.0      ..'High-performance preforking PSGI/Plack web server'
+
+M tags perl perl5
+
+O -l --listen =str...  ..'Specifies the TCP address, ports and UNIX domain sockets'
+O --host =str         ..'Specifies the address to bind'
+O --port =str         ..'Specifies the port to bind'
+O -S --socket =file   ..'Specifies the path to UNIX domain socket to bind'
+O --workers =int      ..'Specifies the number of worker pool'
+O --backlog =int      ..'Specifies the number of backlog (listen queue size)...'
+O --max-requests      ..'Number of the requests to process per one worker process'
+O --preload-app       ..'This option lets Starman preload the specified PSGI application...'
+O --disable-keepalive  ..'Disable Keep-alive persistent connections'
+O --keepalive-timeout =int  ..'The number of seconds Starman will wait for a subsequent request'
+O --read-timeout =int  ..'The number of seconds Starman will wait for a request on a new...'
+O --user =str         ..'To listen on a low-numbered (<1024) port...'
+O --group =str        ..'Specify the group id or group name that the server...'
+O --pid =file         ..'Specify the pid file path'
+O --error-log =file   ..'Specify the pathname of a file where the error log...'
+O --ssl-cert =file    ..'Specify the path to SSL certificate file'
+O --ssl-key =file     ..'Specify the path to SSL key file'
+O --enable-ssl        ..'Enable SSL on all TCP sockets'
+O --disable-proctitle  ..'Disable the behavior to set proctitle to "starman (master)"'
+O -a --app =file      ..'Specifies the full path to a ".psgi" script'
+O -e =str             ..'Evaluates the given perl code as a PSGI app'
+O -s --server =str    ..'Selects a specific server implementation to run on'
+O -S --socket =str    ..'Listens on a UNIX domain socket path'
+O -D --daemonize      ..'Makes the process run in the background'
+O -I =str...          ..'Specifies Perl library include paths'
+O -M =str...          .."Loads the named modules before loading the app's code"
+O -E --env =str       ..'Specifies the environment option'
+O --no-default-middleware  ..'This prevents loading the default middleware stack...'
+O -r --reload         ..'Makes plackup restart the server whenever a file...'
+O -R --Reload =file   ..'Makes plackup restart the server whenever a given file...'
+O --access-log =file  ..'Specifies the pathname of a file where the access log...'
+O --path =str         ..'Specify the root path of your app'
+O -L --loader =[Restarter,Delayed,Shotgun]  ..'Specifies the server loading subclass'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

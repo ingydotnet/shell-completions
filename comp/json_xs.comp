@@ -1,0 +1,18 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/json_xs.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N json_xs v0.0.0      ..'JSON::XS commandline utility'
+
+M tags perl perl5 json
+
+O -f =[json,cbor,storable,storable-file,bencode,clzf,eval,yaml,string,none]  ..'Read a file in the given format from STDIN'
+O -t =[json,json-utf-8,json-pretty,json-utf-16le,json-utf-16be,json-utf-32le,json-utf-32be,cbor,cbor-packed,storable,storable-file,bencode,clzf,yaml,dump,dumper,string,none]  ..'Write the file in the given format to STDOUT'
+O -e =str             ..'Evaluate perl code after reading the data'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

@@ -1,0 +1,20 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/json_pp.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N json_pp v0.0.0      ..'JSON::PP command utility'
+
+M tags perl perl5 json
+
+O -f =[json,eval]     ..'Reads a data in the given format from STDIN'
+O -t =[null,json,dumper]  ..'Writes a data in the given format to STDOUT'
+O --json_opt =[ascii,latin1,utf8,pretty,indent,space_before,space_after,relaxed,canonical,allow_nonref,allow_singlequote,allow_barekey,allow_bignum,loose,escape_slash]  ..'Options to JSON::PP'
+O -v                  ..'Verbose option, but currently no action in fact'
+O -V                  ..'Prints version and exits'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

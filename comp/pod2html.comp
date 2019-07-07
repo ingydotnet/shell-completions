@@ -1,0 +1,39 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/pod2html.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N pod2html v0.0.0     ..'Convert .pod files to .html files'
+
+M tags perl perl5
+
+O --backlink          ..'Turn =head1 directives into links pointing to the top'
+O --nobacklink        ..'Disable --backlink'
+O --cachedir =file    ..'Directory for the directory cache files'
+O --css =str          ..'Stylesheet URL'
+O --flush             ..'Flushes the directory cache'
+O --header            ..'Produce block header/footer'
+O --noheader          ..'Disable --header'
+O --htmldir =file     ..'Directory for resulting HTML files'
+O --htmlroot =str     ..'Http-server base directory'
+O --index             ..'Generate an index at the top'
+O --noindex           ..'Disable --index'
+O --infile =file      ..'Filename for the pod to convert'
+O --outfile =file     ..'Filename for the resulting html file'
+O --poderrors         ..'Include a POD ERRORS section in the output'
+O --nopoderrors       ..'Disable --poderrors'
+O --podpath =file     ..'Colon-separated list of directories containing library pods'
+O --podroot =file     ..'Filesystem base directory'
+O --quiet             ..'Suppress some benign warning messages'
+O --noquiet           ..'Disable --quiet'
+O --recurse           ..'Recurse on those subdirectories listed in podpath'
+O --norecurse         ..'Disable --recurse'
+O --title =str        ..'Title that will appear in resulting html file'
+O --verbose           ..'Self-explanatory'
+O --noverbose         ..'Disable --verbose'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

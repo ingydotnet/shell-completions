@@ -1,0 +1,111 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/pip.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N pip v0.0.0          ..'A tool for installing and managing Python packages'
+
+M tags python
+
+O -v --verbose        ..'Give more output'
+O -V --version        ..'Show version and exit'
+O -q --quiet          ..'Give less output'
+O --log-file =file    ..'Path to a verbose non-appending log...'
+O --log =file         ..'Path to a verbose appending log'
+O --proxy =str        ..'Specify a proxy'
+O --timeout =int      ..'Set the socket timeout'
+O --cert =file        ..'Path to alternate CA bundle'
+O --isolated          ..'Run pip in an isolated mode'
+O --retries =int      ..'Maximum number of retries'
+O --trusted-host =str  ..'Mark this host as trusted'
+O --client-cert =file  ..'Path to SSL client certificate'
+O --cache-dir =dir    ..'Store the cache data in <dir>'
+O --no-cache-dir      ..'Disable the cache'
+O --disable-pip-version-check  .."Don't periodically check PyPI..."
+O --exists-action =[s,i,w,b,a]  ..'Default action when a path already exists'
+O -h --help           ..'Show command help'
+
+C freeze              ..'Output installed packages in requirements format'
+  O -r --requirement =file  ..'From the given requirements file'
+  O -f --find-links =str  ..'If a url or path to an html file, then parse for links...'
+  O -l --local        ..'If in a virtualenv that has global access, do not output globally-installed packages'
+  O --user            ..'Only output packages installed in user-site'
+  O --all             ..'Do not skip pip, setuptools, distribute, wheel'
+
+C install             ..'Install packages'
+  O -r --requirement =file  ..'From the given requirements file'
+  O -f --find-links =str  ..'If a url or path to an html file, then parse for links...'
+  O --no-binary =str...  ..'Do not use binary packages'
+  O --only-binary =str...  ..'Do not use source packages'
+  O -c --constraint =file...  ..'Constrain versions using the given constraints file'
+  O -e --editable =file  ..'Install a project in editable mode'
+  O --src =dir        ..'Directory to check out editable projects'
+  O --ignore-requires-python  ..'Ignore the Requires-Python information'
+  O --no-deps         .."Don't install package dependencies"
+  O -b --build =dir   ..'Directory to unpack packages into and build in'
+  O --global-option =str...  ..'Extra global options to be supplied to the setup.py...'
+  O --pre             ..'Include pre-release and development versions'
+  O --no-clean        .."Don't clean up build directories"
+  O --require-hashes  ..'Require a hash to check each requirement...'
+  O -t --target =dir  ..'Install packages into <dir>'
+  O -d --download =dir  ..'Download packages into <dir>'
+  O -U --upgrade      ..'Upgrade all specified packages to the newest...'
+  O --upgrade-strategy =str  ..'Determines how dependency upgrading should be handled'
+  O --force-reinstall  ..'When upgrading, reinstall all packages..'
+  O -I --ignore-installed  ..'Ignore the installed packages'
+  O --install-option =str...  ..'Extra arguments to be supplied to the setup.py...'
+  O --user            ..'Install to the Python user install directory'
+  O --system          ..'Install using the system scheme'
+  O --egg             .."Install packages as eggs, not 'flat'"
+  O --root =dir       ..'Install everything relative to this...'
+  O --prefix =dir     ..'Installation prefix...'
+  O --compile         ..'Compile py files to pyc'
+  O --no-compile      ..'Do not compile py files to pyc'
+  O --no-use-wheel    ..'Do not Find and prefer wheel archives...'
+  O -i --index-url =str  ..'Base URL of Python Package Index'
+  O --extra-index-url =str  ..'Extra URLs of package indexes to use'
+  O --no-index        ..'Ignore package index'
+  O --process-dependency-links  ..'Enable the processing of dependency links'
+
+C list                ..'List installed packages'
+  O -o --outdated
+  O -u --uptodate
+  O -e --editable
+  O -l --local
+  O --format =str
+  O --not-required
+  O -i --index-url =str  ..'Base URL of Python Package Index'
+  O --extra-index-url =str  ..'Extra URLs of package indexes to use'
+  O --no-index        ..'Ignore package index'
+  O --process-dependency-links  ..'Enable the processing of dependency links'
+
+C search              ..'Search PyPI for packages'
+  O -i --index =str   ..'Base URL of Python Package Index'
+
+C show                ..'Show information about installed packages'
+  O -f --files        ..'Show the full list of installed files'
+
+C uninstall           ..'Uninstall packages'
+  O -r --requirement =file  ..'From the given requirements file'
+  O -y --yes          .."Don't ask for confirmation"
+
+C wheel               ..'Build wheels from your requirements'
+  O -w --wheel-dir =dir
+  O --no-use-wheel
+  O --no-binary =str...  ..'Do not use binary packages'
+  O --only-binary =str...  ..'Do not use source packages'
+  O --build-option =str
+  O -c --constraint =file...  ..'Constrain versions using the given constraints file'
+  O -e --editable =file  ..'Install a project in editable mode'
+  O -r --requirement =file  ..'From the given requirements file'
+  O --src =dir        ..'Directory to check out editable projects'
+  O --ignore-requires-python  ..'Ignore the Requires-Python information'
+  O --no-deps         .."Don't install package dependencies"
+  O -b --build =dir   ..'Directory to unpack packages into and build in'
+  O --global-option =str...  ..'Extra global options to be supplied to the setup.py...'
+  O --pre             ..'Include pre-release and development versions'
+  O --no-clean        .."Don't clean up build directories"
+  O --require-hashes  ..'Require a hash to check each requirement...'
+
+# vim: set ft=sh:

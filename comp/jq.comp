@@ -1,0 +1,39 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/jq.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N jq v0.0.0           ..'Command-line JSON processor'
+
+M tags json
+
+O --arg =str          ..'Pre-set a variable to a string'
+O --argjson           ..'Pre-set a variable to an object'
+O -a --ascii-output   ..'Restrict output to ASCII'
+O -C --color-output   ..'Output in color'
+O -c --compact-output  .."Don't pretty-print"
+O -e --exit-status    ..'Report "false" and "null" results via exit code'
+O -f --from-file =file  ..'Read filter from file'
+O --indent =[1,2,3,4,5,6,7,8]  ..'Indent output using given number of spaces'
+O -j --join-output    ..'Like -r, without newlines between outputs'
+O -L =dir             ..'Prepend a directory to the module search path'
+O -M --monochrome-output  ..'Output without color'
+O -n --null-input     ..'Input is ignored'
+O -R --raw-input      ..'Consider each input line as a JSON strings'
+O -r --raw-output     .."Don't JSON-quote output if it's a string"
+O --seq               ..'Use application/json-seq ASCII RS/LF scheme in input and output'
+O -s --slurp          ..'Join input JSON objects to array before filtering'
+O --slurpfile =str    ..'Pre-set a variable to contents of a file'
+O -S --sort-keys      ..'Output object keys in sorted order'
+O --stream            ..'Parse input streamily (changes output)'
+O --tab               ..'Indent output using TAB characters'
+O --unbuffered        ..'Flush output after each JSON object'
+O --version           .."Output jq's version number"
+O --run-tests =file   ..'Runs  the tests in the given file or standard input'
+O -h --help           ..'Show command help'
+
+A str
+A file
+
+# vim: set ft=sh:

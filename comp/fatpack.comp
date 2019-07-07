@@ -1,0 +1,32 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/fatpack.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N fatpack v0.0.0      ..'Pack perl script and modules into standalone script'
+
+M tags perl perl5
+
+O -h --help           ..'Show command help'
+
+C file                .."Recurses into the 'lib' and 'fatlib' directories and bundles all .pm files found into a BEGIN block..."
+  A file
+
+C pack                ..'Pack script and modules'
+  A file
+
+C packlists-for       ..'Searches your perls @INC for .packlist files containing the .pm files'
+  A modules...
+
+C trace               ..'Writes out a trace file containing every module required'
+  O --to =file        ..'Location of trace file'
+  O --to-stderr       ..'Write the trace to STDERR instead'
+  O --use =use...     ..'Specify module(s) to be included additionally'
+
+  A file
+
+C tree                ..'Takes a list of packlist files and copies their contents into a tree at the requested location'
+  A file...
+
+# vim: set ft=sh:

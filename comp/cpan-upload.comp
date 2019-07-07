@@ -1,0 +1,24 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/cpan-upload.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N cpan-upload v0.0.0  ..'Upload a distribution to the CPAN'
+
+M tags perl perl5 cpan
+
+O -v --verbose        ..'Enable verbose logging'
+O --dry-run           ..'Do not actually upload anything'
+O -u --user =str      ..'Your PAUSE username'
+O -p --password =str  ..'The password to your PAUSE account'
+O -d --directory =file  ..'A dir in your CPAN space in which to put the file'
+O --http-proxy        ..'URL of the http proxy to use in uploading'
+O --ignore-errors     ..'Instead of aborting, continue to next file on error'
+O -c --config =file   ..'Config file to use; defaults to ~/.pause'
+O --md5               ..'Compute MD5 checksums of the files'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

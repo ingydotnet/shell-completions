@@ -1,0 +1,57 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/prove.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N prove v0.0.0        ..'Run tests through a TAP harness'
+
+M tags perl perl5
+
+O -v --verbose        ..'Print all test lines'
+O -l --lib            .."Add 'lib' to the path for your tests"
+O -b --blib           .."Add 'blib/lib' and 'blib/arch' to the path"
+O -s --shuffle        ..'Run the tests in random order'
+O -c --color          ..'Colored test output (default)'
+O --nocolor           ..'Do not color test output'
+O --count             ..'Show the X/Y test count when not verbose'
+O --nocount           ..'Disable the X/Y test count'
+O -D --dry            ..'Dry run'
+O -f --failures       ..'Show failed tests'
+O -o --comments       ..'Show comments'
+O --ignore-exit       ..'Ignore exit status from test scripts'
+O -m --merge          ..'Merge test scripts STDERR with their STDOUT'
+O -r --recurse        ..'Recursively descend into directories'
+O --reverse           ..'Run the tests in reverse order'
+O -q --quiet          ..'Suppress some test output'
+O -Q --QUIET          ..'Only print summary results'
+O -p --parse          ..'Show full list of TAP parse errors'
+O --directives        ..'Only show results with TODO or SKIP directives'
+O --timer             ..'Print elapsed time after each test'
+O --trap              ..'Trap Ctrl-C and print summary on interrupt'
+O --normalize         ..'Normalize TAP output in verbose output'
+O -T                  ..'Enable tainting checks'
+O -t                  ..'Enable tainting warnings'
+O -W                  ..'Enable fatal warnings'
+O -w                  ..'Enable warnings'
+O -V --version        ..'Display the version'
+O -H --man            ..'Longer manpage'
+O --norc              ..'Dont process default .proverc'
+O -I =file            ..'Library paths to include'
+O -e --exec =str      ..'Interpreter to run the tests'
+O --ext =str          ..'Set the extension for tests'
+O --harness =str      ..'Define test harness to use'
+O --formatter =str    ..'Result formatter to use'
+O --source =str       ..'Load and/or configure a SourceHandler'
+O -a --archive =file  ..'Store the resulting TAP in an archive file'
+O --rc =file          ..'Process options from rcfile'
+O --rules =str        ..'Rules for parallel vs sequential processing'
+O -j =[1,2,3,4,5,6,7,8,9]  ..'Run N test jobs in parallel'
+O -s --state =[last,failed,passed,all,hot,todo,slow,fast,new,old,fresh,save]...  ..'Control proves persistent state'
+O -P =p...            ..'Load plugin'
+O -M =m...            ..'Load a module'
+O -h --help           ..'Show command help'
+
+A file...
+
+# vim: set ft=sh:

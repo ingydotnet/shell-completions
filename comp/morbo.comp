@@ -1,0 +1,20 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/morbo.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N morbo v0.0.0        ..'Morbo HTTP and WebSocket development server'
+
+M tags perl perl5
+
+O -b --backend =str   ..'Morbo backend to use for reloading'
+O -l --listen =str...  ..'One or more locations you want to listen on'
+O -m --mode =str      ..'Operating mode for your application'
+O -v --verbose        ..'Print details about what files changed'
+O -w --watch =file    ..'One or more directories and files to watch for changes'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

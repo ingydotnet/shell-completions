@@ -1,0 +1,73 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/cpanm.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N cpanm v0.0.0        ..'Install CPAN modules'
+
+M tags perl perl5 cpan
+
+O -i --install        ..'Installs the modules. This is a default behavior'
+O --self-upgrade      ..'Upgrades itself'
+O --info              ..'Displays the distribution information in "AUTHOR/Dist-Name-ver.tar.gz" format'
+O --installdeps       .."Installs the dependencies of the target distribution but won't build itself"
+O --look              ..'Download and unpack the distribution and then open the directory with your shell'
+O -v --version        ..'Displays the version number'
+O -f --force          ..'Force install modules even when testing failed'
+O -n --notest         ..'Skip the testing of modules'
+O --test-only         ..'Run the tests only, and do not install the specified module or distributions'
+O -S --sudo           ..'Switch to the root user with "sudo" when installing modules'
+O -v --verbose        ..'Makes the output verbose'
+O -q --quiet          ..'Makes the output even more quiet than the default'
+O -l --local-lib =file  ..'Sets the local::lib compatible path to install modules to'
+O -L --local-lib-contained =file  ..'Same with "--local-lib" but with --self-contained set'
+O --self-contained    ..'When examining the dependencies, assume no non-core modules are installed on the system'
+O --exclude-vendor    .."Don't include modules installed under the 'vendor' paths..."
+O --mirror =str       ..'Specifies the base URL for the CPAN mirror to use'
+O --mirror-only       .."Download the mirror's index file instead of querying the CPAN Meta DB"
+O -M --from =str      ..'Use the given mirror URL and its index as the only source'
+O --mirror-index =file  ..'EXPERIMENTAL Specifies the file path to "02packages.details.txt"'
+O --cpanmetadb =file  ..'EXPERIMENTAL Specifies an alternate URI for CPAN MetaDB'
+O --metacpan          ..'Prefers MetaCPAN API over CPAN MetaDB'
+O --cpanfile =file    ..'EXPERIMENTAL Specified an alternate path for cpanfile'
+O --prompt            ..'Prompts when a test fails so that you can skip, force install...'
+O --dev               ..'EXPERIMENTAL search for a newer developer release as well'
+O --reinstall         ..'Reinstall module'
+O --interactive       ..'Makes the configuration (such as "Makefile.PL" and "Build.PL") interactive'
+O --pureperl          ..'Prefer Pure perl build of modules'
+O --pp                ..'Prefer Pure perl build of modules'
+O --with-recommends   ..'EXPERIMENTAL Installs dependencies declared as "recommends"'
+O --with-suggests     ..'EXPERIMENTAL Installs dependencies declared as "suggests"'
+O --with-develop      ..'EXPERIMENTAL Installs develop phase dependencies'
+O --with-configure    ..'EXPERIMENTAL Installs configure phase dependencies'
+O --with-feature      ..'EXPERIMENTAL Specifies the feature to enable'
+O --without-feature   ..'EXPERIMENTAL Specifies the feature to enable'
+O --with-all-features  ..'EXPERIMENTAL Specifies the feature to enable'
+O --configure-timeout =int  ..'Specify the timeout length (in seconds) to wait'
+O --build-timeout =int  ..'Specify the timeout length (in seconds) to wait'
+O --test-timeout =int  ..'Specify the timeout length (in seconds) to wait'
+O --configure-args =str  ..'EXPERIMENTAL Pass arguments for configure command'
+O --build-args =str   ..'EXPERIMENTAL Pass arguments for build command'
+O --test-args =str    ..'EXPERIMENTAL Pass arguments for test command'
+O --install-args =str  ..'EXPERIMENTAL Pass arguments for install command'
+O --scandeps          ..'DEPRECATED Scans the depencencies of given modules'
+O --format =[tree,json,yaml,dists]  ..'DEPRECATED Determines what format to display the scanned dependency tree'
+O --save-dists =file  ..'Specifies the optional directory path to copy downloaded tarballs'
+O --uninst-shadows    ..'Uninstalls the shadow files of the distribution'
+O -U --uninstall      ..'Uninstalls a module from the library path'
+O --cascade-search    ..'EXPERIMENTAL Specifies whether to cascade search when you specify multiple mirrors'
+O --skip-installed    ..'Specifies whether a module given in the command line is skipped...'
+O --skip-satisfied    ..'EXPERIMENTAL Specifies whether a module (and version) given...'
+O --verify            ..'Verify the integrity of distribution files retrieved from PAUSE'
+O --report-perl-version  ..'Whether it reports the locally installed perl version'
+O --auto-cleanup =int  .."Specifies the number of days in which cpanm's work directories expire"
+O --man-pages         ..'Generates man pages for executables (man1) and libraries (man3)'
+O --lwp               ..'Uses LWP module to download stuff over HTTP'
+O --wget              ..'Uses GNU Wget (if available) to download stuff'
+O --curl              ..'Uses cURL (if available) to download stuff'
+O -h --help           ..'Show command help'
+
+A modules...
+
+# vim: set ft=sh:

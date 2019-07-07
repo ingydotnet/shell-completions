@@ -1,0 +1,17 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/mpath.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N mpath v0.0.0        ..'Display the full path to a perl module (installed locally)'
+
+M tags perl perl5
+
+O --full              ..'Print module name'
+O --quiet             .."Don't print any error when one of the module requested could not be found"
+O -h --help           ..'Show command help'
+
+A module...
+
+# vim: set ft=sh:

@@ -1,0 +1,76 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/mojo.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N mojo v0.0.0         ..'The Mojolicious command system'
+
+M tags perl perl5
+
+O -m --mode =str      ..'Operating mode for your application'
+O --home =file        ..'Path to application home directory'
+O -h --help           ..'Show command help'
+
+C cgi                 ..'Start application with CGI'
+  O --nph             ..'Enable non-parsed-header mode'
+
+C cpanify             ..'Upload distribution to CPAN'
+  O -p --password =str  ..'PAUSE password'
+  O -u --user =str    ..'PAUSE username'
+
+C daemon              ..'Start application with HTTP and WebSocket server'
+  O -c --clients =int  ..'Maximum number of concurrent connections'
+  O -l --listen =str  ..'One or more locations you want to listen on'
+  O -p --proxy        ..'Activate reverse proxy support'
+  O -r --requests =int  ..'Maximum number of requests per keep-alive connection'
+  O -b --backlog =str  ..'Listen backlog size'
+  O -i --inactivity-timeout =int  ..'Inactivity timeout'
+
+C eval                ..'Run code against application'
+  O -v --verbose      ..'Print return value to STDOUT'
+  O -V                ..'Print returned data structure to STDOUT'
+
+C generate            ..'Generate files and directories from templates'
+
+C get                 ..'Perform HTTP request'
+  O -C --charset =str  ..'Charset of HTML/XML content'
+  O -c --content =str  ..'Content to send with request'
+  O -f --form =str...  ..'One or more form values and file uploads'
+  O -h --header =str...  ..'One or more additional HTTP headers'
+  O -o --connect-timeout =int  ..'Connect timeout'
+  O -r --redirect     ..'Follow up to 10 redirects'
+  O -S --response-size =int  ..'Maximum response size in bytes'
+  O -u --user =str    ..'Alternate mechanism for specifying colon-separated username and password'
+  O -v --verbose      ..'Print request and response headers to STDERR'
+  O -M --method =[GET,HEAD,POST,PUT,DELETE,CONNECT,OPTIONS,TRACE,PATCH]  ..'HTTP method to use'
+  O -i --inactivity-timeout =int  ..'Inactivity timeout'
+
+C inflate             ..'Inflate embedded files to real files'
+
+C prefork             ..'Start application with pre-forking HTTP and WebSocket server'
+  O -a --accepts =int  ..'Number of connections for workers to accept'
+  O -c --clients =int  ..'Maximum number of concurrent connections'
+  O -G --graceful-timeout =int  ..'Graceful timeout'
+  O -I --heartbeat-interval =int  ..'Heartbeat interval'
+  O -H --heartbeat-timeout =int  ..'Heartbeat timeout'
+  O -l --listen =str...  ..'One or more locations you want to listen on'
+  O -P --pid-file =file  ..'Path to process id file'
+  O -p --proxy        ..'Activate reverse proxy support'
+  O -r --requests =int  ..'Maximum number of requests per keep-alive connection'
+  O -s --spare =int   ..'Temporarily spawn up to this number of additional workers'
+  O -w --workers =int  ..'Number of workers'
+  O -b --backlog =str  ..'Listen backlog size'
+  O -i --inactivity-timeout =int  ..'Inactivity timeout'
+
+C psgi                ..'Start application with PSGI'
+
+C routes              ..'Show available routes'
+  O -v --verbose      ..'Print additional details about routes'
+
+C test                ..'Run tests'
+  O -v --verbose      ..'Print verbose debug information to STDERR'
+
+C version             ..'Show versions of available modules'
+
+# vim: set ft=sh:

@@ -1,0 +1,32 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/plackup.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N plackup v0.0.0      ..'Run PSGI application with Plack handlers'
+
+M tags perl perl5
+
+O -a --app =file      ..'Specifies the full path to a ".psgi" script'
+O -e =str             ..'Evaluates the given perl code as a PSGI app'
+O -o --host =str      ..'Binds to a TCP interface'
+O -p --port =str      ..'Binds to a TCP port'
+O -s --server =str    ..'Selects a specific server implementation to run on'
+O -S --socket =str    ..'Listens on a UNIX domain socket path'
+O -l --listen =str    ..'Listens on one or more addresses'
+O -D --daemonize      ..'Makes the process run in the background'
+O -I =str...          ..'Specifies Perl library include paths'
+O -M =str...          .."Loads the named modules before loading the app's code"
+O -E --env =str       ..'Specifies the environment option'
+O --no-default-middleware  ..'This prevents loading the default middleware stack...'
+O -r --reload         ..'Makes plackup restart the server whenever a file...'
+O -R --Reload =file   ..'Makes plackup restart the server whenever a given file...'
+O --access-log =file  ..'Specifies the pathname of a file where the access log...'
+O --path =str         ..'Specify the root path of your app'
+O -L --loader =[Plack::Loader,Restarter,Delayed,Shotgun]  ..'Specifies the server loading subclass'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

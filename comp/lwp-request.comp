@@ -1,0 +1,35 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/lwp-request.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N lwp-request v0.0.0  ..'Simple command line user agent (Aliases GET, HEAD, POST)'
+
+M tags perl perl5 http
+
+O -m =[GET,HEAD,POST,PUT,DELETE,CONNECT,OPTIONS,TRACE,PATCH]  .."Use method for the request (default is 'GET')"
+O -f                  ..'Make request even if lwp-request believes method is illegal'
+O -b =str             ..'Use the specified URL as base'
+O -t =int             ..'Set timeout value'
+O -i =str             ..'Set the If-Modified-Since header on the request'
+O -c =str             ..'Use this content-type for POST, PUT, CHECKIN'
+O -a                  ..'Use text mode for content I/O'
+O -p =str             ..'Use this as a proxy'
+O -P                  .."Don't load proxy settings from environment"
+O -H =str             ..'Send this HTTP header (you can specify several)'
+O -C =str             ..'Provide credentials for basic authentication (<username>:<password>)'
+O -u                  ..'Display method and URL before any response'
+O -U                  ..'Display request headers (implies -u)'
+O -s                  ..'Display response status code'
+O -S                  ..'Display response status chain (implies -u)'
+O -e                  ..'Display response headers (implies -s)'
+O -E                  ..'Display whole chain of headers (implies -S and -U)'
+O -d                  ..'Do not display content'
+O -v                  ..'Show program version'
+O -o =[text,ps,links,html,dump]  ..'Process HTML content in various ways'
+O -h --help           ..'Show command help'
+
+A str
+
+# vim: set ft=sh:

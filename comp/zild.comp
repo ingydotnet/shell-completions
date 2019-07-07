@@ -1,0 +1,35 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/zild.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N zild v0.0.0         ..'Dist::Zilla Mixed Up'
+
+M tags perl perl5
+
+O -h --help           ..'Show command help'
+
+C cpan                ..'Turn repo into a "Dist::Zilla" ready subdirectory called "./cpan/"'
+
+C cpanshell           ..'Start a shell in cpan dir'
+
+C dist                ..'Basically the same as "zild cpan; cd cpan; dzil build".'
+
+C distdir             ..'Create a dist dir'
+
+C distshell           ..'Start a shell in the dist dir'
+
+C disttest            ..'Run tests of generated dist package'
+
+C install             ..'Build and install the software. Same as install from CPAN.'
+
+C prereqs             ..'Install the prereqs from CPAN'
+
+C release             ..'Build the dist, then "cpan-upload" it.'
+
+C test                ..'Run the test suite.'
+
+C update              ..'Rebuild the ReadMe.pod and other generated files.'
+
+# vim: set ft=sh:

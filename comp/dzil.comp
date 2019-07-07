@@ -1,0 +1,80 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/dzil.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N dzil v0.0.0         ..'Do stuff with your dist'
+
+M tags perl perl5
+
+O -v --verbose        ..'Log additional output'
+O -V --verbose-plugin =str  ..'Log additional output from some plugins only'
+O -I --lib-inc =dir   ..'Additional @INC dirs'
+O -h --help           ..'Show command help'
+
+C add                 ..'Add modules to an existing dist'
+  O -p --profile =str  ..'Name of the profile to use'
+  O -P --provider =str  ..'Name of the profile provider to use'
+
+C authordeps          ..'List your distributions author dependencies'
+  O --root =str       ..'The root of the dist; defaults to .'
+  O --missing         ..'List only the missing dependencies'
+  O --versions        ..'Include required version numbers in listing'
+
+C build               ..'Build your dist'
+  O --trial           ..'Build a trial release that PAUSE will not index'
+  O --tgz             ..'Build a tarball (default behavior)'
+  O --in =str         ..'The directory in which to build the distribution'
+
+C clean               ..'Clean up after build, test, or install'
+  O -n --dry-run      ..'Dont actually remove anything, just show what would be done'
+
+C commands            ..'List the applications commands'
+
+C install             ..'Install your dist'
+  O --install-command =str  ..'Command to run to install (e.g. "cpan .")'
+  O --keep-build-dir =str  ..'Keep the build directory even after a success'
+
+C listdeps            ..'Print your distributions prerequisites'
+  O --author =str     ..'Include author/develop dependencies'
+  O --missing         ..'List only the missing dependencies'
+  O --requires        ..'List the required dependencies'
+  O --recommends      ..'List the recommended dependencies'
+  O --suggests        ..'List the suggested dependencies'
+  O --versions        ..'Include required version numbers in listing'
+  O --cpanm-versions  ..'Format versions for consumption by cpanm'
+  O --json            ..'List dependencies by phase, in JSON format'
+  O --omit-core =str  ..'Omit dependencies that are shipped with the specified version of perl'
+
+C new                 ..'Mint a new dist'
+  O -p --profile =str  ..'Name of the profile to use'
+  O -P --provider =str  ..'Name of the profile provider to use'
+
+C nop                 ..'Do nothing: initialize dzil, then exit'
+
+C release             ..'Release your dist'
+  O --trial           ..'Build a trial release that PAUSE will not index'
+
+C run                 ..'Run stuff in a dir where your dist is built'
+  O --build           ..'Do the Build actions before running the command; done by default'
+  O --trial           ..'Build a trial release that PAUSE will not index'
+
+C setup               ..'Set up a basic global config file'
+
+C smoke               ..'Smoke your dist'
+  O --release         ..'Enables the RELEASE_TESTING env variable'
+  O --automated       ..'Enables the AUTOMATED_TESTING env variable (default behavior)'
+  O --author          ..'Enables the AUTHOR_TESTING env variable'
+
+C test                ..'Test your dist'
+  O --release         ..'Enables the RELEASE_TESTING env variable'
+  O --automated       ..'Enables the AUTOMATED_TESTING env variable (default behavior)'
+  O --author          ..'Enables the AUTHOR_TESTING env variable'
+  O --extended        ..'Enables the EXTENDED_TESTING env variable'
+  O --all             ..'Enables the RELEASE_TESTING, AUTOMATED_TESTING, EXTENDED_TESTING and AUTHOR_TESTING env variables'
+  O --keep-build-dir =str  ..'Keep the build directory even after a success'
+  O -j --jobs =int    ..'Number of parallel test jobs to run'
+  O --test-verbose    ..'Enables verbose testing (TEST_VERBOSE env variable on Makefile.PL, --verbose on Build.PL'
+
+# vim: set ft=sh:

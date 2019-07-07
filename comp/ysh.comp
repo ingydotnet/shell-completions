@@ -1,0 +1,23 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/ysh.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N ysh v0.0.0          ..'The YAML Test Shell'
+
+M tags perl perl5 yaml
+
+O -M                  ..'Set the YAML implementation module you wish'
+O -l                  .."Keep a log of all ysh activity in './ysh.log'. Append mode"
+O -L                  .."Keep a log of all ysh activity in './ysh.log'. Delete first"
+O -r                  ..'Test roundtripping'
+O -R                  ..'Same as -r, except that a confirmation message will be printed when the roundtrip succeeds'
+O -i =[1,2,3,4,5,6,7,8]  ..'Specify the number of characters to indent each level'
+O -v                  ..'Print the versions of ysh and the YAML implementation module in use'
+O -V                  ..'Like -v, and print the versions of YAML related modules'
+O -h --help           ..'Show command help'
+
+A file
+
+# vim: set ft=sh:

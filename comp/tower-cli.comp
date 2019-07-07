@@ -1,0 +1,73 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/tower-cli.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N tower-cli v0.0.0    ..'Ansible Tower Commandline'
+
+M tags ansible
+
+O --format =[human,json,yaml,id]  ..'Output format'
+O -h --help           ..'Show command help'
+
+C ad_hoc              ..'Launch commands based on playbook given at...'
+
+C config              ..'Read or write tower-cli configuration'
+  O --global          ..'Write this config option to the global configuration.'
+  O --unset           ..'Remove reference to this configuration option from the config file.'
+  O --scope =[local,user,global]
+
+C credential          ..'Manage credentials within Ansible Tower'
+
+C credential_type     ..'Manage credential types within Ansible Tower'
+
+C group               ..'Manage groups belonging to an inventory'
+
+C host                ..'Manage hosts belonging to a group within an...'
+
+C instance            ..'Check instances within Ansible Tower'
+
+C instance_group      ..'Check instance groups within Ansible Tower'
+
+C inventory           ..'Manage inventory within Ansible Tower'
+
+C inventory_script    ..'Manage inventory scripts within Ansible...'
+
+C inventory_source    ..'Manage inventory sources within Ansible...'
+
+C inventory_update    ..'Launch or monitor inventory source updates'
+
+C job                 ..'Launch or monitor jobs'
+
+C job_template        ..'Manage job templates'
+
+C label               ..'Manage labels within Ansible Tower'
+
+C node                ..'Manage nodes inside of a workflow job...'
+
+C notification_template  ..'Manage notification templates within Ansible...'
+
+C organization        ..'Manage organizations within Ansible Tower'
+
+C project             ..'Manage projects within Ansible Tower'
+
+C project_update      ..'Launch or monitor project updates'
+
+C role                ..'Add and remove users/teams from roles'
+
+C schedule            ..'Manage schedules within Ansible Tower'
+
+C setting             ..'Manage settings within Ansible Tower'
+
+C team                ..'Manage teams within Ansible Tower'
+
+C user                ..'Manage users within Ansible Tower'
+
+C version             ..'Display version information'
+
+C workflow            ..'Manage workflow job templates'
+
+C workflow_job        ..'Launch or monitor workflow jobs'
+
+# vim: set ft=sh:

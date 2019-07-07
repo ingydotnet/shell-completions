@@ -1,0 +1,23 @@
+# From https://github.com/perlpunk/shell-completions/blob/master/specs/dancer2.yaml
+#
+# shellcheck shell=sh disable=2102
+
+CompleteShell v0.2
+
+N dancer2 v0.0.0      ..'Dancer2 command line interface'
+
+M tags perl perl5
+
+O -h --help           ..'Show command help'
+
+C commands            .."List the application's commands"
+
+C gen                 ..'Create new Dancer2 application'
+  O -a --application =str  ..'Application name'
+  O -d --directory =dir  ..'Application folder'
+  O -p --path =file   ..'Application path'
+  O -o --overwrite    ..'Overwrite existing files'
+  O -x --no-check     .."Don't check latest Dancer2 version"
+  O -s --skel =dir    ..'Skeleton directory'
+
+# vim: set ft=sh:
